@@ -16,11 +16,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class JwtService {
 
-  private final String SECRET_KEY = "lucky";
+  private final String SECRET_KEY = "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970";
 
-  private long jwtExpiration;
+  private long jwtExpiration=  86400000 ;
 
-  private long refreshExpiration;
+  private long refreshExpiration=  604800000 ;
 
   public String extractUsername(String token) {
     return extractClaim(token, Claims::getSubject);
